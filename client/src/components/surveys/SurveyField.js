@@ -1,0 +1,15 @@
+import React from "react";
+
+// pulls from props.input
+// es6 2 level deep destructuring
+export default ({ input, label, meta: { error, touched } }) => {
+  return (
+    <div>
+      <label>{label}</label>
+      <input {...input} style={{ marginBottom: "5px" }} />
+      <div className="red-text" style={{ marginBottom: "20px" }}>
+        {touched && error}
+      </div>
+    </div>
+  );
+};
